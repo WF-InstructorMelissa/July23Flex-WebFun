@@ -1,0 +1,1 @@
+Use this folder to keep your assignments in 1 central place and close to the lecture notes
