@@ -1,0 +1,65 @@
+* {
+    border: 5px red dotted;
+}
+
+img {
+    max-width: 200px;
+}
+.pink {
+    font-size: 4em;
+}
+
+.fun {
+    background-color: pink;
+}
+#blue {
+    background-color: blue;
+    padding: 3em;
+}
+
+.first {
+    color: purple;
+}
+.three {
+    color: cyan;
+}
+/* h2 {
+    color: yellow!important;
+} */
+.top {
+    height: 900px;
+    background-color: blue;
+}
+
+.container {
+    width: 100px;
+    height: 100px;
+    padding: 6em;
+    background-color: pink;
+}
+.top-nav {
+    width: 150px;
+    height: 150px;
+    margin: 6em 6em 6em 2em;
+    background-color: bisque;
+    padding: 2em;
+}
+.sub-content {
+    width: 50px;
+    height: 50px;
+}
+.main {
+    width: 200px;
+}
+#advertisement {
+    width: 180px;
+    height: 20px;
+}
+.side-nav {
+    width: 30px;
+    height: 300px;
+    border: 3px black double;
+}
+.container .main .pink {
+    background-color: pink;
+}
