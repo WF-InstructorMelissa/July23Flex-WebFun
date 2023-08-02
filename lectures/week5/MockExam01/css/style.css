@@ -1,0 +1,49 @@
+/* * {
+    border: 1px red dotted;
+} */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+}
+.miniHeader {
+    width: 50%;
+}
+.navRow {
+    width: 75%;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%
+}
+.box {
+    border: 2px solid black;
+    padding: .5em;
+}
+img {
+    max-height: 300px;
+}
