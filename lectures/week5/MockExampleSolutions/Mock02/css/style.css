@@ -1,0 +1,149 @@
+/* Base / starter settings */
+/* * {
+    border: red dotted 1px;
+} */
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.altcolumn {
+    display: flex;
+    flex-direction:column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+#bad {
+    display: none;
+}
+table {
+    background-color: #fff;
+    border: black 1px solid;
+    color: black;
+}
+tr, td, th {
+    border-left: black 1px solid;
+    border-right: black 1px solid;
+}
+th {
+    background-color: #a5a2a2;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    background-image: url('../images/baseballBackground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+/* All Header styling */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    background-color: #706d6d48;
+    width: 95%;
+}
+
+/* Main Content Styling */
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin-top: 1em;
+}
+.main .box01 {
+    width: 100%;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.main .box02 {
+    width: 85%;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: -10em;
+}
+.main .box02 table {
+    margin-top: 10em;
+}
+.main .row table {
+    font-size: 1.2em;
+}
+.main .row table th {
+    padding: .5em;
+}
+.main .row table td {
+    padding: .5em;
+}
+.ltgrey {
+    background-color: #d7d1d1;
+}
+
+
+/* Main Score Content Styling */
+.scoreBox {
+    background-color: #ffffff7b;
+    width: 50%;
+    padding: 1em;
+}
+#inning {
+    align-self: flex-end;
+    margin: .5em;
+}
+.scoreBox img {
+    border: 1px #000 solid;
+    border-radius: 50%;
+}
+.logos {
+    justify-content: space-around;
+    width: 95%;
+}
+.logos h3 {
+    color: green;
+    font-size: 1.6em;
+}
+.standings {
+    font-size: 1.6em;
+    justify-content: space-around;
+    width: 95%;
+}
+#watchImg {
+    /* needed due to the negative margin on the box below this images was physically never being clicked because the lower box was technically over top of it */
+    z-index: 10;
+}
+
+/* Breaking News Box Styling */
+#hidden {
+    display: none;
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    background-color: #fff;
+    color: #000;
+}
+#hidden img {
+    align-self: flex-start;
+}
+#hidden .column {
+    width: 60%;
+}
+#hidden #close {
+    align-self: flex-start;
+    font-size: 2em;
+    color: red;
+}

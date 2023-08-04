@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Savages VS Bombers</title>
+</head>
+<body>
+    <header>
+        <h1>Savages VS Bombers</h1>
+    </header>
+    <!-- should be 95% of body -->
+    <div class="main">
+        <!-- top row 2 boxes row should span 95% of column -->
+        <div class="row box01">
+            <!-- Box 1 - the team 50% -->
+            <div class="column scoreBox">
+                <h3 id="inning">Bot 7th</h3>
+                <div class="row logos">
+                    <img src="./images/savagesLogo.gif" alt="Savages">
+                    <h3 class="green"><span id="sc">3</span> - <span id="bc">4</span></h3>
+                    <img src="./images/bombersLogo.gif" alt="Bombers">
+                </div>
+                <div class="column">
+                    <div class="row standings">
+                        <div class="column">
+                            <h3>Savages</h3>
+                            <p>(43-66)</p>
+                        </div>
+                        <div class="column">
+                            <h3>Bombers</h3>
+                            <p>(62-46)</p>
+                        </div>
+                    </div>
+                    <img id="watchImg" src="./images/watchLiveLogo.gif" alt="Watch Live" onclick="watchAlert()">
+                </div>
+            </div>
+            <!-- Box/table - 50% -->
+            <table>
+                <tr>
+                    <th>Teams</th>
+                    <th>Score</th>
+                    <th>Inning</th>
+                    <th>Final</th>
+                </tr>
+                <tr class="ltgrey">
+                    <td>Goodfellas VS Hitman</td>
+                    <td>2 -5</td>
+                    <td>Bot 6th</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Flying J-birds VS Sons-of-Pitches</td>
+                    <td></td>
+                    <td></td>
+                    <td>7 - 3</td>
+                </tr>
+                <tr class="ltgrey">
+                    <td>Dirty Ducks VS Noreasters</td>
+                    <td>15 - 2</td>
+                    <td>Top 9th</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Bats-in-da-hood VS Lazer Beams</td>
+                    <td>0 - 0</td>
+                    <td>Top 1st</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="row box02">
+            <table>
+                <tr>
+                    <th>Team</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>R</th>
+                    <th>H</th>
+                    <th>E</th>
+                </tr>
+                <tr class="ltgrey">
+                    <td>Savages</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td onclick="addRun('s8')" id="s8">-</td>
+                    <td onclick="addRun('s9')" id="s9">-</td>
+                    <td id="sr">3</td>
+                    <td id="sh">5</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Bombers</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td onclick="addRun('b7')" id="b7">-</td>
+                    <td onclick="addRun('b8')" id="b8">-</td>
+                    <td onclick="addRun('b9')" id="b9">-</td>
+                    <td id="br">4</td>
+                    <td id="bh">6</td>
+                    <td>0</td>
+                </tr>
+            </table>
+            <div class="column">
+                <h2>Game Highlights</h2>
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/-Bo9I1GIfvM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+            </div>
+        </div>
+    </div>
+    <div id="hidden">
+        <img src="./images/breakingNews.jpg" alt="Breaking News">
+        <div class="column">
+            <h3>Breaking News</h3>
+            <p>Dirty Ducks Player Johny Appleseed was just rushed to the hospital after being hit by a pitch.</p>
+            <p>Noreasters pitcher Bob Danger thew a fast ball that went wall and hit Johnny Appleseed in the head forcing the player to be rushed to the hospital. Appleseed was struck just below the helmet by Danger and passed out.  For safety reasons Appleseed will be kept overnight.  Danger's fast ball was over 90MPH but wild.  Game is on a 30 min pause</p>
+        </div>
+        <button id="close" onclick="rehide()">X</button>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
