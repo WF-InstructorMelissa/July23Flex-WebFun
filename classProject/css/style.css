@@ -10,16 +10,20 @@
 
 /* Block Game Base */
 .box {
-    positon: relative;
+    position: relative;
     width: 250px;
     height: 25px;
     margin: 30% auto ;
     background: #fff;
-    box-shadow: -10px 5px 30px rgba(0,0,0,.5);
+    box-shadow: -10px 5px 30px #00000080;
     transition: .5s;
     transform: skewY(-20deg);
   /*   transform: skewX(10deg); */
     box-sizing: border-box;
+  }
+  .next {
+    transform: translate(-10px, -200px);
+    transform: translate(10px, 200px);
   }
   .box::before {
     content: '';
@@ -33,6 +37,7 @@
     transform: skewY(45deg);
   /*   transform: skewX(-5deg); */
   }
+ 
   .box::after {
     content: '';
     position: absolute;
@@ -44,7 +49,10 @@
     transform-origin: bottom left;
     transform: skewX(45deg);
   }
-  .box h3 {
+  /* .next::after {
+    top: -300px;
+  } */
+  /* .box h3 {
     position: relative;
     background: #169fff;
     color: #fff;
@@ -72,4 +80,4 @@
     color: #262222;
     text-align: center;
     font-size: 18px;
-  }
+  } */
