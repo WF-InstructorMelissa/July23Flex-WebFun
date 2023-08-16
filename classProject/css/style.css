@@ -81,3 +81,10 @@
     text-align: center;
     font-size: 18px;
   } */
+
+  #grid {
+    display: flex;
+    line-height: .3;
+    font-size: 8px;
+    color: #ffffff00;
+  }

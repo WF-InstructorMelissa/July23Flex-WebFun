@@ -5,8 +5,11 @@
 // rows = 180
 // columns = 360
 
-let rows = 180
-let cols = 360
+let rows = 361
+let cols = 181
+let shape = '&#9744;'
+let lat = 90
+let long = -180
 
 function setGrid() {
     let grid = []
@@ -14,40 +17,52 @@ function setGrid() {
         grid.push([])
         // Make cells in each row
         for (let x = 0; x < cols; x++) {
-            grid[y].push('0')
+            grid[y].push(shape)
         }
     }
-    console.log(grid)
-    var plot =  document.getElementById('grid')
-    plot.innerText = grid
+    console.log("the grid", grid)
+    return grid
+    // var plot =  document.getElementById('grid')
+    // plot.innerText = grid
 }
-setGrid()
+// setGrid()
+
+// pa = 41 lat -76 long
+// lat north = + lat south = -
+// long west = - long east = +
+// grid starts top left = 90 -180
 
 function makeGrid() {
     var grid = document.getElementById('grid')
     let theGrid = setGrid()
-    console.log(theGrid)
-    // for(let y = 0; y < theGrid.length; y++) {
-    //     // Make a div for each row and give it a class name
-    //     let rowDiv = document.createElement('div')
-    //     rowDiv.className = 'gridRow'
-    //     for(let x = 0; x < theGrid[y].length; x++) {
-    //         // Make a div for each cell and give it a class in side 1 row
-    //         let cell = document.createElement('div')
-    //         cell.innerHTML = theGrid[y][x]
-    //         cell.className = 'cell'
-    //         cell.setAttribute('id', x+','+y)
-    //         // push the cells to the row
-    //         rowDiv.appendChild(cell)
-    //     }
-    //     // rowDiv.innerHTML = theGrid[y]
-    //     // add row with cells to the main board div
-    //     grid.appendChild(rowDiv)
-    // }
-    // grid.appendChild(board)
+    console.log('in make grid',theGrid)
+    console.log('the grid length', theGrid.length)
+    for(let y = 0; y < theGrid.length; y++) {
+        // Make a div for each row and give it a class name
+        let rowDiv = document.createElement('div')
+        rowDiv.className = 'gridRow'
+        console.log('the grid y length', theGrid[y].length)
+        for(let x = 0; x < theGrid[y].length; x++) {
+            // Make a div for each cell and give it a class in side 1 row
+            let cell = document.createElement('div')
+            // places each cell inside the row
+            cell.innerHTML = theGrid[y][x]
+            cell.className = 'cell'
+            
+            cell.setAttribute('id', lat+','+long)
+            // push the cells to the row
+            rowDiv.appendChild(cell)
+            lat--
+            long++
+        }
+        // rowDiv.innerHTML = theGrid[y]
+        // add row with cells to the main board div
+        grid.appendChild(rowDiv)
+    }
+    grid.appendChild(board)
 }
 
-// makeGrid()
+makeGrid()
 
 
 
