@@ -5,11 +5,13 @@
 // rows = 180
 // columns = 360
 
-let rows = 361
-let cols = 181
+let rows = 181
+// let rows = 10
+let cols = 361
+// let cols = 10
 let shape = '&#9744;'
-let lat = 90
-let long = -180
+let thelat = 90
+let thelong = -180
 
 function setGrid() {
     let grid = []
@@ -48,24 +50,31 @@ function makeGrid() {
             // places each cell inside the row
             cell.innerHTML = theGrid[y][x]
             cell.className = 'cell'
-            
-            cell.setAttribute('id', lat+','+long)
+            var lat = (y+thelat)
+            // loop 1 lat = 0 + 90
+            // loop 2 lat = 1 + 88
+            // loop 2 lat = 2 + 86
+            var long = (x+thelong)
+            cell.setAttribute('id', long+','+lat)
             // push the cells to the row
             rowDiv.appendChild(cell)
-            lat--
-            long++
         }
         // rowDiv.innerHTML = theGrid[y]
         // add row with cells to the main board div
         grid.appendChild(rowDiv)
+        thelat-=2
     }
-    grid.appendChild(board)
 }
 
 makeGrid()
 
-
-
+function plotQuake(theId) {
+    var spot = document.getElementById(theId)
+    spot.style.color = 'red'
+    spot.style.fontSize = '10em'
+    spot.style.display = 'inline-block'
+}
+plotQuake('0,0')
 
 
 // Block Game Functions
