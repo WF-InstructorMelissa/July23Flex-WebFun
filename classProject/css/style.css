@@ -87,7 +87,7 @@
     flex-direction: column;
     line-height: 1.184;
     font-size: 3px;
-    color: #ffffff00;
+    /* color: #ffffff00; */
   }
   .gridRow {
     display: flex;
